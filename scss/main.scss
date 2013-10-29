@@ -1,0 +1,23 @@
+// Normalize
+@import "normalize";
+
+// Foundation variables.
+@import "coop/variables";
+
+// Coop custom variables.
+@import "foundation/variables";
+
+// Foundation global components.
+@import "foundation";
+
+// Custom foundation global elements.
+@import "custom";
+
+// Coop global components
+@import "coop";
+
+//Documentation styles only
+@import "docs"; 
+
+
+

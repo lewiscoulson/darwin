@@ -1,0 +1,40 @@
+#header {
+	.basket {
+		&.business-module {
+			background: $theme;
+			a.button {
+				margin-top: 10px;
+			}
+			.basket-items {
+				border: 2px solid $theme;
+			}
+		}			
+		.basket-items {
+			padding-top: 0.46875em;
+			border: 1px solid $core-color-grey-3;
+			background: #fff;
+			margin: 0 -0.46875em;
+			p {
+				margin-bottom: 0.563em;
+			}
+		}
+		a.button {
+			width: 100%;
+			color: #fff;
+		}
+	}
+}
+
+.no-js .row.basket-items {
+	padding-top: 0.46875em;
+	/*
+	margin-right: 0.0068em;
+	margin-left: 0.0068em;
+	outline: 1px solid red;
+	*/
+	margin: 0;	
+	background: #fff;
+	p {
+		margin-bottom: 0.563em;
+	}
+}

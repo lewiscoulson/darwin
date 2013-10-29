@@ -1,0 +1,132 @@
+﻿$visitedLinkColor: #8838dd;
+ 
+ul{
+	&.arrow {
+	  li {
+		
+		list-style-type: none; 
+		&:before { 
+		  content: "\e008";
+		  font: {
+			family: 'CoopIcons';
+			size: 0.75em;
+		  }
+		  padding-right: 4px;
+		  line-height: 1;
+		}
+	  }
+	}
+	&.basic {
+		padding-left: 0;
+		li {
+			list-style-type: none; 		
+		}
+	}	
+}
+
+blockquote {
+  a{
+    color: #0359b2 !important;
+  }
+
+}
+
+a.link{
+  color: #595959;
+  border-bottom: 1px dotted #555;
+  &:hover{
+    color: #595959;
+    border-bottom-style: solid;
+  }
+  &:visited{
+    color: $visitedLinkColor;
+    border-color: $visitedLinkColor;
+  }
+}
+
+.content {
+  a{
+    color: #0359b2;
+    border-bottom: 1px dotted $core-color-grey-1;
+    &:hover{
+      color: #0359b2;
+      border-bottom-style: solid;
+    }
+    &:visited{
+      color: $visitedLinkColor;
+      border-color: $visitedLinkColor;
+    }
+  }
+}
+
+.back {
+	display: block;
+	clear: both;
+	text-align: right;	
+	font: {
+		size: 0.75em;
+	}
+	margin: 1.25em 0 1.5em;
+}
+
+.call-to-action:after,
+.back:after,
+.window:after,
+.email:after,
+.print:after {
+	position: relative;
+	font: {
+		family: 'CoopIcons';
+		size: 1.125em;
+		weight: normal;
+	}
+	color: $core-color-grey-1;
+}
+
+.call-to-action:after {
+	font: {
+		size: 0.875em;
+	}
+	content: '\e008';
+	margin-left: 5px;
+}
+
+.back:after {
+	content: '\e012';
+}
+
+.window:after {
+	content: '\e013';
+}
+
+.email:after {
+	content: '\e014';
+}
+
+.print:after {
+	content: '\e015';
+}
+
+.txt-sml {
+	font-size: 0.75em;
+}
+
+.txt-med {
+	font-size: 0.875em;
+}
+
+.txt-lrg {
+	font-size: 1.125em;
+}
+
+.txt-xlrg {
+	font-size: 1.25em;	
+}
+
+.txt-italic {
+	font-style: italic;
+}
+
+.txt-bold {
+	font-weight: bold;
+}

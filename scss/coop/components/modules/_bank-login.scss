@@ -1,0 +1,11 @@
+#header {
+	.internet-bank {
+		&.business-module {
+			background: $theme;
+		}
+		a.button {
+			width: 100%;
+			color: #fff;
+		}
+	}
+}

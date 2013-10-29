@@ -1,0 +1,13 @@
+#header-utility-nav {
+	li.log-in:before,
+	li.sign-in:before {
+		content: '\e00a';
+	}
+}
+
+.business-module.log-in {
+	background: $theme;
+	label {
+		color: #fff;
+	}
+}

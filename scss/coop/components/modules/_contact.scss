@@ -1,0 +1,86 @@
+
+
+#header-utility-nav {
+	li.contact-us:before {
+		content: '\e010';
+	}
+}
+
+#header .contact-us {
+	background: $theme;
+	color: #fff;
+		
+	.columns {
+		padding-left: 50px;
+		&:before {
+			position: absolute;
+			top: 0px;
+			left: 5px;
+			content: '\e009';
+			float: left;
+			font: {
+				family: 'CoopIcons';
+				size: 2.375em;
+			}
+			color: $core-color-grey-1;
+		}
+	}
+	p {
+		color: #555;
+		line-height: 1.375em;
+		margin: 10px 0 0;	
+		&.telephone {
+			font: {
+				family: "HelveticaNeueLight", helvetica, arial, sans-serif;
+				size: 1.25em;
+			}
+			span {
+				color: $core-color-blue;
+				font: {
+					family: "HelveticaNeueHeavy", helvetica, arial, sans-serif;
+
+				}
+				white-space: nowrap;
+			}
+		}
+		+ p {
+			font: {
+				size: 0.75em;
+				style: italic;
+			}
+		}
+		a {
+			border-bottom: {
+				style: dotted;
+				width: 1px;
+			}
+		}
+	}
+	&.business-module {
+		h3 {
+			position: absolute;
+			left: -999em;
+		}	
+		p {
+			margin: 10px 0 ;	
+			color: #fff;
+			&.telephone {
+				margin-bottom: 0;
+				span {
+					color: #fff;
+					display: block;
+					font: {
+						size: 1.375em;	
+					}						
+				}
+			}	
+		}
+		.columns {
+			&:before {
+				top: 10px;
+				color: #fff;
+			}
+		}
+	}	
+}
+

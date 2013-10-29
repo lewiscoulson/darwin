@@ -1,0 +1,46 @@
+﻿$body-bg: #fff;
+/*div {
+	outline: 1px solid red;
+}*/
+
+.example {
+	.row {
+		background: #eee;
+		margin-bottom: 10px;
+	}
+	.row .columns, 
+	.row .column {
+		background: #e7e7e7;
+		border: 1px solid #ddd;
+		font-weight: bold;
+		text-indent: 3px;
+		padding-top: 8px;
+		color: #444;
+		padding-bottom: 8px;
+	}
+}
+
+.code {
+	padding: 10px 15px;
+	border: 1px solid $core-color-grey-3;
+	background: $core-color-grey-5;
+}
+
+.gutter {
+	&.row {
+		background: #ffffff;
+		margin-bottom: 0;
+		.columns {
+			background: #ffffff;
+			border: none;
+			padding: 10px;
+		}
+	}
+	.ele {
+		display: block;
+		width: 100%;
+		padding: 10px 15px;
+		background: #e7e7e7;
+		border: 1px solid #ddd;
+	}
+}

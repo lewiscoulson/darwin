@@ -1,0 +1,12 @@
+﻿table {
+	&.reset {
+		border: none;
+		th {
+			background: #fff;
+		}
+		tr.even, tr.alt, tr:nth-of-type(even) {
+			background: #fff;
+		}
+	}
+}
+

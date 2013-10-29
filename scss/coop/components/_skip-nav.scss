@@ -1,0 +1,41 @@
+/* Skip navigation
+----------------------------------------------------------------------------------------------------*/
+#skip-nav {
+	position: absolute;
+	top: -9999px;
+	left: 0;
+	z-index: 999;
+	li {
+		width: 300px;
+		a {
+			position: absolute;
+			top: 0;
+			font-size: 0.875em;
+			padding: 5px 8px;
+			color: #FFFFFF;
+			background: $core-color-blue;
+			&:focus {
+				outline: none;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+#skip-nav 
+#skip-nav 
+#skip-nav a:active, 
+#skip-nav a:focus {
+	top: 9999px;
+	color: #FFFFFF;
+}
+
+#skip-nav li a:hover:after, 
+#skip-nav li a:focus:after {
+	content: " [" attr(accesskey) "] ";
+}
+
+#main:focus, 
+#primary-nav:focus, 
+#secondary-nav:focus {
+	outline: none;
+}

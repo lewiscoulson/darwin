@@ -1,0 +1,11 @@
+#header-utility-nav {
+	li.find-branch:before {
+		content: '\e00c';
+	}
+}
+
+#header {
+	.business-module.find-branch {
+		background: $theme;
+	}
+}

@@ -1,0 +1,161 @@
+﻿
+/* ==========================================================================
+   Coop button styles
+   ========================================================================== */
+
+
+
+@mixin defaultButtonBackground($state:default){
+  @if $state == default {
+	border:1px solid #ccc;  
+	background-color: #154a8b;
+	background-image: -moz-linear-gradient(top , #154a8b, #154a8b 50.0%,$core-color-blue 50.0%,$core-color-blue 100.0%);
+	background-image: -webkit-linear-gradient(top , #154a8b, #154a8b 50.0%,$core-color-blue 50.0%,$core-color-blue 100.0%);
+	background-image: -o-linear-gradient(top , #154a8b, #154a8b 50.0%,$core-color-blue 50.0%,$core-color-blue 100.0%);
+	background-image: -ms-linear-gradient(top , #154a8b, #154a8b 50.0%,$core-color-blue 50.0%,$core-color-blue 100.0%);
+	background-image: linear-gradient(top , #154a8b, #154a8b 50.0%,$core-color-blue 50.0%,$core-color-blue 100.0%);
+	-pie-background: linear-gradient(top , #154a8b, #154a8b 50.0%,$core-color-blue 50.0%,$core-color-blue 100.0%);
+  } // end if
+  @else if $state == hover{
+    background-color: #1d3b62;
+	background-image: -moz-linear-gradient(top , #1d3b62, #1d3b62 50.0%,#011739 50.0%,#011739 100.0%);
+	background-image: -webkit-linear-gradient(top , #1d3b62, #1d3b62 50.0%,#011739 50.0%,#011739 100.0%);
+	background-image: -o-linear-gradient(top , #1d3b62, #1d3b62 50.0%,#011739 50.0%,#011739 100.0%);
+	background-image: -ms-linear-gradient(top , #1d3b62, #1d3b62 50.0%,#011739 50.0%,#011739 100.0%);
+	background-image: linear-gradient(top , #1d3b62, #1d3b62 50.0%,#011739 50.0%,#011739 100.0%);
+	-pie-background: linear-gradient(top , #1d3b62, #1d3b62 50.0%,#011739 50.0%,#011739 100.0%);
+  } //end else if
+  @else if $state == active{
+	background-color: #01214c;
+	background-image: -moz-linear-gradient(top , #01214c, #01214c 52.0%,#113a6d 52.0%,#113a6d 100.0%);
+	background-image: -webkit-linear-gradient(top , #01214c, #01214c 52.0%,#113a6d 52.0%,#113a6d 100.0%);
+	background-image: -o-linear-gradient(top , #01214c, #01214c 52.0%,#113a6d 52.0%,#113a6d 100.0%);
+	background-image: -ms-linear-gradient(top , #01214c, #01214c 52.0%,#113a6d 52.0%,#113a6d 100.0%);
+	background-image: linear-gradient(top , #01214c, #01214c 52.0%,#113a6d 52.0%,#113a6d 100.0%);
+	-pie-background: linear-gradient(top , #01214c, #01214c 52.0%,#113a6d 52.0%,#113a6d 100.0%);
+  }
+}//end mixin
+
+/* split button styles */
+.button.split span { width:2em;  }
+.button.split.small span:before { top: 30%; left: 40%; }
+.button.split.medium span:before { top: 27%; left: 47%;} 
+.button.split.medium { padding-right: 3.3em;}
+.button.split.large span:before { top: 24%; left: 52%; }
+.button.split.large { padding-right: 3em;}
+
+.button{
+    padding: 0.6em 1em; 
+    box-shadow:none;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-family: helvetica ,Arial ,sans-serif; 
+	behavior: url(js/vendor/PIE.htc);		
+	-pie-watch-ancestors: 3;
+    @include defaultButtonBackground();
+    &.small  { font-size: 0.688em; }
+    &.medium { font-size: 0.938em;  padding: 0.5em 1.125em; }
+    &.large  { font-size: 1.438em; padding: 0.438em 1em }
+    &:hover{
+      @include defaultButtonBackground(hover);
+    }
+    &:active{
+      @include defaultButtonBackground(active);
+    }
+    &.visited{
+      color:white;
+    }
+  }//end button class
+
+// .button{  }
+
+// .button:hover{  }
+
+// .button:active { @include defaultButtonBackground(active);}
+
+.button:after { content: '' ; display: block ; position: absolute ; top: 0 ; bottom: 0 ; left: 0 ; right: 0; border-radius: 8px; border: 2px solid white ; z-index: 10;}
+
+.button span {
+	behavior: url(js/vendor/PIE.htc);
+	-pie-watch-ancestors: 3;
+}
+
+.button.split span{ 
+	background-color: $theme-lighter;
+	background-image: -moz-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
+	background-image: -webkit-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
+	background-image: -o-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
+	background-image: -ms-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
+	background-image: linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
+	-pie-background: linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
+  }
+
+ .button.split:hover span{
+	background-color: $theme-lighter;
+	background-image: -moz-linear-gradient(top , $theme-light, $theme-light 50.0%,$theme-dark 50.0%,$theme-dark 100.0%);
+	background-image: -webkit-linear-gradient(top , $theme-light, $theme-light 50.0%,$theme-dark 50.0%,$theme-dark 100.0%);
+	background-image: -o-linear-gradient(top , $theme-light, $theme-light 50.0%,$theme-dark 50.0%,$theme-dark 100.0%);
+	background-image: -ms-linear-gradient(top , $theme-light, $theme-light 50.0%,$theme-dark 50.0%,$theme-dark 100.0%);
+	background-image: linear-gradient(top , $theme-light, $theme-light 50.0%,$theme-dark 50.0%,$theme-dark 100.0%);	
+	-pie-background: linear-gradient(top , $theme-light, $theme-light 50.0%,$theme-dark 50.0%,$theme-dark 100.0%);	
+ }
+ 
+ .button.split:active span{ 
+	background-color: $theme;
+	background-image: -moz-linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-image: -webkit-linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-image: -o-linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-image: -ms-linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-image: linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	-pie-background: linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+ }
+
+
+
+.button.split span.icon-right_arrow:before{ border:none; content: "\e008"; left: 55%};
+
+.button.split span.icon-plus:before{ border:none; content: "\e000"; };
+
+.button.split span.icon-info_i:before{ border:none; content: "\e001"; };
+
+
+.button.light{
+  color: #002663;
+  background-color: #fff;
+	background-image: -moz-linear-gradient(top , #ffffff, #f6f6f6 50.0%,#e2e3e2 50.0%,#eaeaea 100.0%);
+	background-image: -webkit-linear-gradient(top , #ffffff, #f6f6f6 50.0%,#e2e3e2 50.0%,#eaeaea 100.0%);
+	background-image: -o-linear-gradient(top , #ffffff, #f6f6f6 50.0%,#e2e3e2 50.0%,#eaeaea 100.0%);
+	background-image: -ms-linear-gradient(top , #ffffff, #f6f6f6 50.0%,#e2e3e2 50.0%,#eaeaea 100.0%);
+	background-image: linear-gradient(top , #ffffff, #f6f6f6 50.0%,#e2e3e2 50.0%,#eaeaea 100.0%);	
+	-pie-background: linear-gradient(top , #ffffff, #f6f6f6 50.0%,#e2e3e2 50.0%,#eaeaea 100.0%);
+  }
+
+.button.light:hover{
+  background-color: #e2e0df;
+	background-image: -moz-linear-gradient(top , #e2e0df, #e2e0df 50.0%,#cbcbcc 50.0%,#cbcbcc 100.0%);
+	background-image: -webkit-linear-gradient(top , #e2e0df, #e2e0df 50.0%,#cbcbcc 50.0%,#cbcbcc 100.0%);
+	background-image: -o-linear-gradient(top , #e2e0df, #e2e0df 50.0%,#cbcbcc 50.0%,#cbcbcc 100.0%);
+	background-image: -ms-linear-gradient(top , #e2e0df, #e2e0df 50.0%,#cbcbcc 50.0%,#cbcbcc 100.0%);
+	background-image: linear-gradient(top , #e2e0df, #e2e0df 50.0%,#cbcbcc 50.0%,#cbcbcc 100.0%);	
+	-pie-background: linear-gradient(top , #e2e0df, #e2e0df 50.0%,#cbcbcc 50.0%,#cbcbcc 100.0%);
+}
+.button.light:active {
+  background-color: #cbcbcc;
+	background-image: -moz-linear-gradient(top , #cbcbcc, #cbcbcc 52.0%,#e2e0df 52.0%,#e2e0df 100.0%);
+	background-image: -webkit-linear-gradient(top , #cbcbcc, #cbcbcc 52.0%,#e2e0df 52.0%,#e2e0df 100.0%);
+	background-image: -o-linear-gradient(top , #cbcbcc, #cbcbcc 52.0%,#e2e0df 52.0%,#e2e0df 100.0%);
+	background-image: -ms-linear-gradient(top , #cbcbcc, #cbcbcc 52.0%,#e2e0df 52.0%,#e2e0df 100.0%);
+	background-image: linear-gradient(top , #cbcbcc, #cbcbcc 52.0%,#e2e0df 52.0%,#e2e0df 100.0%);
+	-pie-background: linear-gradient(top , #cbcbcc, #cbcbcc 52.0%,#e2e0df 52.0%,#e2e0df 100.0%);
+}
+
+.split.button span {
+	border-left: none;
+}
+
+
+
+
+
+
+

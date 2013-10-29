@@ -1,0 +1,47 @@
+#header-utility-nav {
+	li.sign-in:before {
+		content: '\e00a';
+	}
+}
+
+#header {
+	.sign-in {
+		a.button {
+			color: #fff;
+		}
+		&.business-module {
+			background: $theme;		
+			h3,
+			h3 a,
+			li a {
+				/*color: $core-color-blue;*/
+			}
+
+		}
+		h3 {
+			span {
+				margin: 0 0 0 5px;
+				font: {
+					family: arial, sans-serif;
+					weight: normal;
+					size: 0.563em;
+				}
+			}
+		}
+	}		
+	.business-module,
+	.module	{			
+		ul {
+			li {
+				display: inline-block;
+				a {
+					font-size: 0.75em;
+				}
+			}
+		}
+	}
+}
+
+#header ul#modules li li {
+	border: none;
+}

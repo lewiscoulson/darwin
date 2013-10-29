@@ -1,0 +1,110 @@
+// Start Footer 
+#footer {
+	clear: both;
+	background: $core-color-grey-5;
+	
+	// Footer links
+	a {
+		&:hover {
+			color: $core-color-blue;
+			text-decoration: underline;
+		}
+		&:focus {
+			outline: none;
+			text-decoration: underline;
+		}
+	}
+	
+	// Footer list items
+	li {
+		font: {
+			size: 0.875em;
+		}
+		list-style: none;
+		line-height: 1.375em;
+		color: $core-color-grey;
+		a {
+			color: $core-color-grey;
+		}
+	}
+	
+	// Footer headings
+	h3 {	
+		font: {
+			size: 1.125em;
+			weight: normal;
+			family: 'HelveticaNeueHeavy', helvetica, arial, sans-serif;
+		}
+		padding: 10px 5px 0px;	
+	}
+	h4 {
+		font: {
+			family: helvetica, arial, sans-serif;
+			size: 0.875em;
+			weight: bold;
+		}
+		a {
+			color: $core-color-blue;
+		}
+	}
+	
+	// Footer navigation
+	nav {
+		clear: both;
+		background: $core-color-grey-3;
+		ul {
+			float: left;
+			padding: 7px 10px;
+			margin: 0;
+			li {
+				float: left;
+				font-style: italic;
+				padding: 3px 5px;
+				a {
+					font-style: normal;
+					padding: 0 10px 0 0;
+					border-right: 1px solid $core-color-grey;
+				}
+			}
+		}
+	}
+	
+	// Secondary navigation
+	#secondary-nav {
+		h2 {
+			padding: 10px 5px 0px;
+			font-size: 1.125em;
+		}
+	}
+	.feature {
+		padding: 10px 15px;
+		a {
+			color: #fff;
+		}
+	}	
+	
+	// Quick links
+	.quick-links {
+		@include clearfix();
+		padding-bottom: 15px;
+		.businesses li {
+			float: left;
+			clear: both;
+		}
+	}
+	
+} // End Footer 
+
+@media #{$medium} {
+
+	#footer {
+		.quick-links {
+			.businesses li {
+				width: 33%;
+				clear: none;
+			}
+		}
+	}
+
+	
+}

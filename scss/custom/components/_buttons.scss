@@ -1,0 +1,9 @@
+﻿.button.small, .button.medium, .button.large {
+	margin-bottom: 5px;
+}
+
+button, .button {
+	span {
+		color: $theme-foreground;
+	}
+}

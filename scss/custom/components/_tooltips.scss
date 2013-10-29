@@ -1,0 +1,10 @@
+﻿.has-tip {
+	&.icon-info_i {
+		border-radius: 20px;
+		background: $theme;
+		color: #fff;
+		font-weight: normal !important;
+		padding: 5px;
+		font-size: 0.688em;
+	}
+}

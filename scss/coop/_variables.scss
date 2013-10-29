@@ -1,0 +1,64 @@
+﻿//
+// Coop Variables
+//
+
+// Core Colors
+$core-color-blue: #002663;
+$core-color-white: #fff;
+$core-color-black: #000;
+$core-color-grey: #555;
+
+// Five Shades of Grey
+$core-color-grey-1: #AAAAAA;
+$core-color-grey-2: #d9d9d9;
+$core-color-grey-3: #dbdbdb;
+$core-color-grey-4: #f2f2f2;
+$core-color-grey-5: #f5f5f5;
+
+// Primary Business Colors
+$primary-color-finance: #09c;
+$primary-color-food: #98cb00;
+$primary-color-funeralcare: #8490c8;
+$primary-color-group: #002663;
+$primary-color-legal: #980033;
+$primary-color-membership: #ffb612;
+$primary-color-motors: #8a968f;
+$primary-color-pharmacy: #349999;
+$primary-color-travel: #f7661e;
+
+$business: finance;
+$theme: $primary-color-group !default;
+$theme-foreground: #fff !default;
+
+@mixin brand($business) {
+	@if $business == finance {
+		$theme: $primary-color-finance;
+	} @else if $business == food {
+		$theme: $primary-color-food;
+		$theme-foreground: $core-color-blue;
+	} @else if $business == funeralcare {
+		$theme: $primary-color-funeralcare;
+	}  @else if $business == group {
+		$theme: $primary-color-group;
+	} @else if $business == legal {
+		$theme: $primary-color-legal;
+	} @else if $business == membership {
+		$theme: $primary-color-membership;
+		$theme-foreground: $core-color-blue;
+	} @else if $business == motors {
+		$theme: $primary-color-motors;
+	} @else if $business == pharmacy {
+		$theme: $primary-color-pharmacy;
+	} @else if $business == travel {
+		$theme: $primary-color-travel;
+	} @else {
+		$theme: $primary-color-group;
+	}
+	
+}
+
+@include brand($business);
+
+$theme-light: lighten($theme, 4%);
+$theme-lighter: lighten($theme, 4%);
+$theme-dark: darken($theme, 4%);

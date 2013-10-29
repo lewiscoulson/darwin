@@ -1,0 +1,204 @@
+/* Global Navigation
+----------------------------------------------------------------------------------------------------*/
+.global-nav {
+	position: relative;
+	float: right;
+	display: block;
+	font-family: 'HelveticaNeueLight', helvetica, arial, sans-serif;		
+	font-size: 1em;	
+	padding: 0;
+	margin: 0 5px 0 0;		
+	z-index: 1111;
+	&:focus {
+		outline: none;
+	}
+}
+
+.global-nav a:visited { color: #002663; }
+
+.global-nav a:focus {
+	outline: 0;
+	text-decoration: underline;
+}
+
+.global-nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.global-nav li {
+	position: relative;
+}
+
+.lt-ie9 .global-nav li {
+	border: 1px solid #FFFFFF;
+}
+
+.lt-ie9 .global-nav li.hover,
+.lt-ie9 .global-nav li:hover {
+	border: 1px solid #DBDBDB;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.global-nav li:hover,
+.global-nav li.hover {
+	-moz-box-shadow: 0 0 4px #AAAAAA;
+	-webkit-box-shadow: 0 0 4px #AAAAAA;
+	box-shadow: 0 0 4px #AAAAAA;	
+	background: #FFFFFF;	
+}
+
+.global-nav li > a {
+	position: relative;
+	display: block;
+	padding: 6px 24px 11px 12px;	
+	text-decoration: none;
+	color: #002663;
+}
+
+.global-nav h3 {
+	font-size: 1.125em;
+	font-weight: normal;
+	font-family: 'HelveticaNeueHeavy', helvetica, arial, sans-serif;
+	margin: 0.125em 0;
+	padding: 0;
+	color: #002663;
+}
+
+.global-nav li h3 a {
+	text-decoration: none;
+	color: #002663;	
+}
+
+.global-nav li h3 a:hover {
+	text-decoration: underline;
+}
+
+.global-nav li ul {
+	padding: 0;
+	margin: 0;	
+	list-style: none;
+}
+
+.global-nav li ul li {
+	position: relative;
+}
+
+
+.no-js .global-nav > a:hover, 
+.no-js .global-nav li:hover {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+	behavior: none;		
+	text-decoration: underline;			
+}
+
+/* Global navigation dropdown
+----------------------------------------------------------------------------------------------------*/
+.global-nav .dropdown {
+	display: none;	
+}
+
+.global-nav .dropdown {
+	position: absolute;
+	left: 0;
+	top: 35px;
+	width: 350px;
+	-moz-box-shadow: 0 0 4px #AAAAAA;
+	-webkit-box-shadow: 0 0 4px #AAAAAA;
+	box-shadow: 0 0 4px #AAAAAA;	
+	background: #FFFFFF;	
+}
+
+.lt-ie9 .global-nav .dropdown {
+	margin-left: -1px;
+	border: 1px solid #DBDBDB;
+}
+
+.global-nav .dropdown div:first-child {
+	padding: 10px 0 15px 15px;
+}
+
+.global-nav .dropdown div:first-child ul {
+	padding-right: 15px;
+	border-right: 1px solid #F2F2F2;	
+}
+
+.global-nav .dropdown .column {
+	float: left;
+	width: 150px;
+	padding: 10px 15px 15px;	
+}
+
+.global-nav .dropdown .column img {
+	margin: 7px 0;	
+}
+
+.global-nav .dropdown ul li {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+}
+
+.global-nav .dropdown ul li,
+.global-nav .dropdown ul li:hover {
+	border: none;	
+}
+
+.global-nav .dropdown ul li a {
+	position: relative;
+	padding: 0;	
+	font-size: 1.125em;
+	text-decoration: none;
+}
+
+.global-nav .dropdown ul li a:hover,
+.global-nav .dropdown ul li a:focus {
+	text-decoration: underline;
+}
+
+
+/* Hide Global navigation border
+----------------------------------------------------------------------------------------------------*/
+
+.global-nav li span {
+	position: absolute;
+	left: -999em;
+	bottom: 0px;
+	height: 7px;
+	width: 100%;
+	background: #FFFFFF;
+	display:  block;
+	z-index: 998;	
+}
+
+.global-nav li:hover span,
+.global-nav li.hover span {
+	left: 0;
+}
+
+.global-nav li a span {
+	height: 0;
+}
+
+.global-nav li:hover a span,
+.global-nav li.hover a span {
+	background-color: transparent;	
+	top: 12px;
+	left: auto;
+}
+
+.global-nav ul li a span {
+	font-size: 0.688em;
+	position: absolute;
+	display: block;
+	top: 12px;
+	left: auto;
+	bottom: auto;
+	right: 8px;
+	width: 12px;
+	height: 8px;
+		
+}

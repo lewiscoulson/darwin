@@ -1,0 +1,78 @@
+﻿input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+	height: ($form-label-font-size + ($form-spacing * 1.5) - emCalc(0.875));
+	line-height: normal;
+}
+
+.error input,
+input.error,
+.error textarea,
+textarea.error {
+	@include form-error-color;
+}
+.error label,
+label.error { 
+	@include form-label-error-color; 
+}
+
+.error small,
+small.error {
+	@include form-error-message;
+}
+
+.panel {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dbdbdb;
+	margin-bottom: 1.25em;
+	padding: 1.25em;
+	background: #f9f9f9;
+}
+
+.panelcontainer .row{
+	background: none;
+	border:none;
+}
+
+.panelcontainer .row .columns{
+  background: none;
+  border:none;
+}
+
+.italized{
+  font-size: 0.875em;
+  font-style: italic;
+  color: #666;
+}
+
+.icon-button {
+  border-radius: 0px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #dbdbdb;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: $core-color-grey-1;
+  display: block;
+  font-size: 1.375em;
+  margin: 0 0 1em 0;
+  padding: 5px;
+  line-height: 14px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  //-webkit-transition: all 0.15s linear;
+  //-moz-transition: all 0.15s linear;
+  //transition: all 0.15s linear;
+  overflow: hidden;
+}
+
+.icon-button:hover {
+  background: $core-color-white;
+  color: $core-color-blue;
+}
+
+@media (max-width: 480px) {
+	.small-12 label.right {
+		float: left !important;
+	}
+}
