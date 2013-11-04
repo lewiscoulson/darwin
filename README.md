@@ -18,5 +18,6 @@ v1.0
 - Inital GitHub release
 
 
-Please note that due to lisencing issues the fonts are not included with the release. 
-However, they can be acquired on the Digital Guidelines site. 
+Please note that due to lisencing issues the fonts are not included with the release. However, they can be acquired on the Digital Guidelines site. 
+
+For detailed information of each release, check the commit summary located above each file.
