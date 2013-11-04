@@ -102,7 +102,7 @@
 			}
 
 			li.contact-us:before {
-				content: '\e010';
+				content: '\e009';
 			}
 
 			li.site-search:before {
@@ -338,7 +338,7 @@ div#modules {
 }
 
 // Breakpoint
-@media (min-width: 480px) and (max-width: 975px) {
+@media (min-width: 481px) and (max-width: 975px) {
 
 	#header ul#modules li.open {
 		width: 52%;
@@ -352,7 +352,7 @@ div#modules {
 }
 
 // Breakpoint
-@media (max-width: 479px) {
+@media (max-width: 480px) {
 
 	#header ul#modules.mod-open li {
 		width: 25%;

@@ -15,6 +15,16 @@ $core-color-grey-3: #dbdbdb;
 $core-color-grey-4: #f2f2f2;
 $core-color-grey-5: #f5f5f5;
 
+//Form Focus Colour
+$input-focus-border-color: #498ee9;
+
+//Form Error Colour
+$alert-color: #ff7700 !default;
+
+//Form Alert box colour
+$alert-border-color: #000 !default;
+
+
 // Primary Business Colors
 $primary-color-finance: #09c;
 $primary-color-food: #98cb00;
@@ -26,7 +36,7 @@ $primary-color-motors: #8a968f;
 $primary-color-pharmacy: #349999;
 $primary-color-travel: #f7661e;
 
-$business: finance;
+$business: group;
 $theme: $primary-color-group !default;
 $theme-foreground: #fff !default;
 
@@ -53,12 +63,20 @@ $theme-foreground: #fff !default;
 		$theme: $primary-color-travel;
 	} @else {
 		$theme: $primary-color-group;
-	}
-	
+	}	
 }
 
 @include brand($business);
 
-$theme-light: lighten($theme, 4%);
-$theme-lighter: lighten($theme, 4%);
-$theme-dark: darken($theme, 4%);
+$theme-btn: $theme; 
+
+$theme-light: lighten($theme-btn, 4%);
+$theme-lighter: lighten($theme-btn, 4%);
+$theme-dark: darken($theme-btn, 4%);
+
+@if $business == group {
+	$theme-btn: $primary-color-finance;
+	$theme-light: lighten($theme-btn, 4%);
+	$theme-lighter: lighten($theme-btn, 4%);
+	$theme-dark: darken($theme-btn, 4%);
+}

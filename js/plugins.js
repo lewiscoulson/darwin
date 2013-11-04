@@ -158,6 +158,7 @@
 						}
 
 						self.options.onLevelClick( $item, $item.children( 'a:first' ).text() );
+						self.$el.trigger("navchange");
 					} );
 
 					return false;
@@ -199,6 +200,7 @@
 						$subview.addClass( 'dl-subviewopen' );
 					}
 					$subview.removeClass( 'dl-subview' );
+					self.$el.trigger("navchange");
 				} );
 
 				return false;
@@ -230,6 +232,7 @@
 			}
 
 			this.open = false;
+			self.$el.trigger("navchange");
 		},
 		openMenu : function() {
 			if( !this.open ) {
@@ -247,6 +250,7 @@
 			} );
 			this.$trigger.addClass( 'dl-active' );
 			this.open = true;
+			this.$el.trigger("navchange");
 		},
 		// resets the menu to its original state (first level of options)
 		_resetMenu : function() {

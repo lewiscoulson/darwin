@@ -5,6 +5,19 @@
 
 #header {
 	padding-top: 5px;
+	transition: 0.4s margin;
+	-webkit-transition: 0.4s margin;
+	-moz-transition: 0.4s margin;
+	-o-transition: 0.4s margin;
+	-ms-transition: 0.4s margin;
+
+	.columns {
+		transition: 0.4s margin;
+		-webkit-transition: 0.4s margin;
+		-moz-transition: 0.4s margin;
+		-o-transition: 0.4s margin;
+		-ms-transition: 0.4s margin;
+	}
 
 	.logo {
 		position: relative;

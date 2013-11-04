@@ -1,6 +1,6 @@
 var breakpoints = [
-    { name: 'mobile', minSize: 0, maxSize: 479 },
-    { name: 'tablet', minSize: 480, maxSize: 974 },
+    { name: 'mobile', minSize: 0, maxSize: 480 },
+    { name: 'tablet', minSize: 481, maxSize: 974 },
     { name: 'desktop', minSize: 975, maxSize: 100000 }];
 var currentBreakpoint;
 var initialised = false;
@@ -217,10 +217,9 @@ $.fn.outerHtml = function(s) {
 	return [];
   }
 
-
 // Self Invoking Anonymous function
-(function () {
-		
+(function() {
+	
 	var mmActive,
     	touchInitiated = false,
 		isTouchMenu = false,
@@ -285,7 +284,12 @@ $.fn.outerHtml = function(s) {
 		$('#dl-menu > ul').addClass('dl-menu');
 
 		// Call mobile menu
-		$('#dl-menu').dlmenu();
+		$('#dl-menu').dlmenu().on('navchange',function(){
+			
+			var $this = $(this).children('ul'), ht = $this.is(':visible') ? $this.height() : 0;
+			ht = (ht > 0) ? ht + 15 : 0;
+			$('.columns:has(.logo)').css('margin-bottom', ht + 'px');
+		});
 		//$('#dl-menu .dl-back a').append('<span aria-hidden="true" class="icon-left_arrow"></span>');
 
 		//
@@ -295,7 +299,7 @@ $.fn.outerHtml = function(s) {
 	// Input menu function
 	function initInputMenu() {
 		
-		if(menuMode == 'D' || !menuLoaded)
+		if(menuMode == 'D' || (!menuLoaded && $('.primary-nav ul[data-url]').size() > 0))
 			return;
 		menuMode = 'D';
 		$('#dl-menu').html(navigationMenu); // Reset mark-up to original
@@ -430,9 +434,7 @@ $.fn.outerHtml = function(s) {
 				
 				var toggleMe = "";
 				if ( typeof item.data('toggle') != 'undefined' ){
-					toggleMe = item.data('toggle');
-					modOpen = true;	
-					$('#header ul#modules').addClass('mod-open');
+					toggleMe = 'to' + item.data('toggle');
 				}
 
 				headerList.append('<li class="' + item.data('class') + ' ' + toggleMe + '"><span class="visuallyhidden">' + item.find('h3').text() + ' </span><div class="module">' + item.html() + '</div></li>');
@@ -443,9 +445,8 @@ $.fn.outerHtml = function(s) {
 				
 			// Bind event handler to list items to show and hide inner menu
 			headerListItems.on('click', function (e) {
- 	   			
 				var that = $(this);
-
+				
 				e.preventDefault();
 				e.stopPropagation();
 
@@ -459,11 +460,19 @@ $.fn.outerHtml = function(s) {
 					headerListItems.removeClass('open');
 					modOpen = false;	
 					$('#header ul#modules').removeClass('mod-open');
+					$('header').css('margin-bottom', '0px');
+					return;
 				}
-	
-								
+
+				//console.log(that.children('.module').css('top'));
+				var topAdj = (that.children('.module').css('top') == '0px') ? that.outerHeight() : 0;
+				//console.log(that.outerHeight());
+				$('header').css('margin-bottom', (that.children('.module').outerHeight() - topAdj) + 'px');
+											
 			});
 			
+			$('.toopen').removeClass('toopen').trigger('click');
+
 			// Stop events bubbling up to header list from inner divs to prevent close on interaction
 			headerListItems.find('div').on(touchEvent, function (e) {
 				e.stopPropagation();
@@ -481,21 +490,27 @@ $.fn.outerHtml = function(s) {
 					modOpen = false;
 					$('#header ul#modules').removeClass('mod-open');
 				}
+				$('header').css('margin-bottom', '0px');
+			});
+
+			$("#touchmodules, #header, #main, #footer").on(touchEvent, function (e) {
+				e.stopPropagation();
 			});
 
 			// @NOTE - May need to remove this, put in for testing on local
-			$(document).on('click', function (e) {
+			/*$(document).on('click', function (e) {
 				if(headerListItems.hasClass('open')) {
 					headerListItems.removeClass('open');
 					modOpen = true;	
 					$('#header ul#modules').removeClass('mod-open');
 				}
-			});
+				$('header').css('margin-bottom', '0px');
+			});*/
 		
 		}
 	}
 
-	function hideTouchModule () {
+	function hideTouchModule() {
 
 		$('.tablet #touchmodules').remove();
 	}
@@ -524,13 +539,39 @@ $.fn.outerHtml = function(s) {
 		headerTouchModules();
 
     	$('#header').addClass('tablet').removeClass('desktop');
+		
+			// Orientation Change
+			/*window.addEventListener("orientationchange", function() {
+				
+				var what = $('#modules li.open');
+				
+				//console.log(that.children('.module').css('top'));
+				var topAdj = (what.children('.module').css('top') == '0px') ? what.outerHeight() : 0;
+				//console.log(that.outerHeight());
+				$('header').css('margin-bottom', (what.children('.module').outerHeight() - topAdj) + 'px');
+				alert(window.orientation, what);
+						
+			}, false);	*/
+			
+			function orientationChange() {
+				var what = $('#modules li.open');
+				
+				//console.log(that.children('.module').css('top'));
+				var topAdj = (what.children('.module').css('top') == '0px') ? what.outerHeight() : 0;
+				//console.log(that.outerHeight());
+				$('header').css('margin-bottom', (what.children('.module').outerHeight() - topAdj) + 'px');
+				//alert(window.orientation, what);	
+			}
+			orientationChange();
+		
 	}
 
 
 
 
 
-	getMenu();
+	window.setTimeout(getMenu,100);
+	//getMenu();
 
 	for (var i = 0; i < utlities.length; i++) {
 		menuArr.push(utlities[i]);
@@ -552,8 +593,7 @@ $.fn.outerHtml = function(s) {
         	initTouch();
         }
     });
-
-	
+		
 
 	
     // Functionlity to add div's for tabs and accordion

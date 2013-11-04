@@ -47,7 +47,8 @@ $active-region-selector: ".active" !default;
 
   @if $section-type != accordion {
     &:not([data-section-resized]):not([data-section-small-style]) {
-      visibility: hidden;
+      //visibility: hidden;
+      border-top: 0px;
     }
   }
   
@@ -382,7 +383,8 @@ $active-region-selector: ".active" !default;
       }
     }
 	.section-container {
-      @include section-container-style(accordion);
+      //@include section-container-style(accordion);
+      border-top: none;
 	  & > section, & > .section { 
         @include section-style(accordion);
       }

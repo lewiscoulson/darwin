@@ -38,3 +38,10 @@
 		margin-bottom: 0.563em;
 	}
 }
+
+
+.no-js .basket.business-module input[type="submit"] {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

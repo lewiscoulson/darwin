@@ -82,12 +82,12 @@
 
 .button.split span{ 
 	background-color: $theme-lighter;
-	background-image: -moz-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
-	background-image: -webkit-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
-	background-image: -o-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
-	background-image: -ms-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
-	background-image: linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
-	-pie-background: linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme 50.0%,$theme 100.0%);
+	background-image: -moz-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme-btn 50.0%,$theme-btn 100.0%);
+	background-image: -webkit-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme-btn 50.0%,$theme-btn 100.0%);
+	background-image: -o-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme-btn 50.0%,$theme-btn 100.0%);
+	background-image: -ms-linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme-btn 50.0%,$theme-btn 100.0%);
+	background-image: linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme-btn 50.0%,$theme-btn 100.0%);
+	-pie-background: linear-gradient(top , $theme-lighter, $theme-lighter 50.0%,$theme-btn 50.0%,$theme-btn 100.0%);
   }
 
  .button.split:hover span{
@@ -101,13 +101,13 @@
  }
  
  .button.split:active span{ 
-	background-color: $theme;
-	background-image: -moz-linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
-	background-image: -webkit-linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
-	background-image: -o-linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
-	background-image: -ms-linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
-	background-image: linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
-	-pie-background: linear-gradient(top , $theme, $theme 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-color: $theme-btn;
+	background-image: -moz-linear-gradient(top , $theme-btn, $theme-btn 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-image: -webkit-linear-gradient(top , $theme-btn, $theme-btn 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-image: -o-linear-gradient(top , $theme-btn, $theme-btn 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-image: -ms-linear-gradient(top , $theme-btn, $theme-btn 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	background-image: linear-gradient(top , $theme-btn, $theme-btn 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
+	-pie-background: linear-gradient(top , $theme-btn, $theme-btn 52.0%,$theme-lighter 52.0%,$theme-lighter 100.0%);
  }
 
 
