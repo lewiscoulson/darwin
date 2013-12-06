@@ -61,8 +61,11 @@ Versioning Policy
 
 The first version of the Responsive Framework was V1.0.0.
 
-The first number will represent the major release number. An example of a major release would be the addition of multiple new features or a major redesign of the foundation the Framework is based on. When the number is incremented all other numbers below are reset to zero.
+The first number will represent the major release number. 
+An example of a major release would be the addition of multiple new features or a major redesign of the foundation the Framework is based on. When the number is incremented all other numbers below are reset to zero.
 
-The second number will represent a feature update. An example of an update to warrant this would be the addition of a new module for example. When the number is incremented the number below is reset to zero.
+The second number will represent a feature update. 
+An example of an update to warrant this would be the addition of a new module for example. When the number is incremented the number below is reset to zero.
 
-The third number represents a bug fix version. When the number exceeds 9 the feature number will increase and the number will be reset to 0.
+The third number represents a bug fix version. 
+When the number exceeds 9 the feature number will increase and the number will be reset to 0.
