@@ -11,7 +11,7 @@ Bug fixes and file additions:
 - Data Toggle set to closed by default.
 - Removed import of documentation styles.
 - Form error styles updated
-- Updated "More from The Co-operative" nav menu, spelling mistake fix and link additions.
+- Updated "More from" nav menu, spelling mistake fix and link additions.
 
 
 v1.0
